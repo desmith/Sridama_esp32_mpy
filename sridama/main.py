@@ -10,7 +10,7 @@ from src.garuda import Garuda
 ### TODO: read these from a config file
 GITHUB_REPO = 'https://github.com/desmith/Sridama_esp32_mpy'
 
-ota = OTAUpdater(GITHUB_REPO)
+ota = OTAUpdater(GITHUB_REPO, root_dir='sridama', main_dir='src')
 
 VERSION = ota.get_version(directory='src', version_file_name='.version')
 
@@ -37,7 +37,7 @@ def boot():
     if reset_cause() == DEEPSLEEP_RESET:
         print('woke from a deep sleep')
 
-    # download_and_install_update_if_available()
+    download_and_install_update_if_available()
 
     while True:
         start()

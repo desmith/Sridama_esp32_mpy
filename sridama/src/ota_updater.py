@@ -10,9 +10,10 @@ import usocket
 
 class OTAUpdater:
 
-    def __init__(self, github_repo, module='', main_dir='src'):
+    def __init__(self, github_repo, module='', root_dir=None, main_dir=None):
         self.http_client = HttpClient()
         self.github_repo = github_repo.rstrip('/').replace('https://github.com', 'https://api.github.com/repos')
+        self.root_dir = root_dir
         self.main_dir = main_dir
         self.module = module.rstrip('/')
 
@@ -58,7 +59,7 @@ class OTAUpdater:
     def _download_and_install_update(self, latest_version, ssid, password):
         OTAUpdater.using_network(ssid, password)
 
-        self.download_all_files(self.github_repo + '/contents/' + self.main_dir, latest_version)
+        self.download_all_files(self.github_repo + '/contents/' + self.root_dir + '/' + self.main_dir, latest_version)
         self.rmtree(self.modulepath(self.main_dir))
         os.rename(self.modulepath('next/.version_on_reboot'), self.modulepath('next/.version'))
         os.rename(self.modulepath('next'), self.modulepath(self.main_dir))
