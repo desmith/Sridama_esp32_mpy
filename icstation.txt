@@ -1,0 +1,20 @@
+This is a soil moisture detection kit designed for Arduino automatic watering system. When the soil moisture level reach the module setting values(adjustable) it will output low level and analog signal. It is equipped with waterproof sensor probe with high corrosion resistance ensure long lifetime.DC 3.3-12V wide working voltage and digital analog signal dual output ideal for your soil moisture detetion projects.
+
+Specifications:
+Working Voltage: DC 3.3-12V
+Working Current: <20m(Output Current:<30mA)
+Module Size: 36X15X7mm/1.42X0.59X0.28inch(L*W*H)
+Sensor Pin Pitch:5mm
+Sensor Cable Length:2.2meter/3.94ft
+Sensor Connecting Port: XH2.54 2P
+
+Specifications:
+1X Soil Moisture Sensor Module
+1X Sensor Probe
+
+Instructions:
++:connect the power supply postive port
+-:connect the power supply negative port.
+After connected the power supply, the "P" indicator will light up and the module will work.
+Regulator the blue potentiometer to regulate the sensor sensitivity. If the set the values as 0.1, regulate it in CW direction means when the moisture is lower than 0.1 will trigger module, if in CCW direction, and detected signal higher than 0.1 will trigger module.
+if regulator the potentiometer lead to the "S" indicator light up means the the regulated values is over the testing limit values
